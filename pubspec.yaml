@@ -32,14 +32,11 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
+  get_storage: ^2.0.3
+  intl: ^0.18.0
+  validatorless: ^1.2.3
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
@@ -77,6 +74,5 @@ flutter:
           weight: 700
         - asset: assets/fonts/mplus1/MPLUS1p-ExtraBold.ttf
           weight: 800
-
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
