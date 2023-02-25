@@ -1,17 +1,18 @@
-import 'package:adf_vakinhaburger_getx/app/core/ui/ui_constants.dart';
+import 'package:adf_vakinhaburger_getx/app/core/ui/constants/vakinha_colors.dart';
+import 'package:adf_vakinhaburger_getx/app/core/ui/constants/vakinha_fonts.dart';
 import 'package:flutter/material.dart';
 
 class VakinhaUI {
   VakinhaUI._();
 
   static final theme = ThemeData(
-    primaryColor: UiConstants.primaryGreen,
-    primaryColorDark: UiConstants.primaryDark,
-    fontFamily: UiConstants.fontMplus1,
+    primaryColor: VakinhaColors.primaryGreen,
+    primaryColorDark: VakinhaColors.primaryDark,
+    fontFamily: VakinhaFonts.fontMplus1,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: UiConstants.primaryGreen,
-        textStyle: const TextStyle(fontFamily: UiConstants.fontMplus1),
+        backgroundColor: VakinhaColors.primaryGreen,
+        textStyle: const TextStyle(fontFamily: VakinhaFonts.fontMplus1),
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
