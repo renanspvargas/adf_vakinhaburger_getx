@@ -1,3 +1,4 @@
+import 'package:adf_vakinhaburger_getx/app/routes/splash_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,9 +11,11 @@ class VakinhaBugerMainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const GetMaterialApp(
+    return GetMaterialApp(
       title: "Vakinha Burger",
-      getPages: [],
+      getPages: [
+        ...SplashRouters.routers,
+      ],
     );
   }
 }
