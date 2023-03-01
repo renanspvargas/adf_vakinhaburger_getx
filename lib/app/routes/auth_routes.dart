@@ -5,6 +5,8 @@ class AuthRoutes {
   AuthRoutes._();
 
   static final routers = <GetPage>[
-    GetPage(name: '/auth/login', page: () => const LoginPage())
+    GetPage(name: login, page: () => const LoginPage())
   ];
+
+  static const login = '/auth/login';
 }
