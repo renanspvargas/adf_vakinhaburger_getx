@@ -1,9 +1,12 @@
 import 'dart:developer';
 
+import 'package:adf_vakinhaburger_getx/app/core/constants/constants.dart';
+import 'package:adf_vakinhaburger_getx/app/core/exceptions/user_notfound_exception.dart';
 import 'package:adf_vakinhaburger_getx/app/core/mixins/loader_mixin.dart';
 import 'package:adf_vakinhaburger_getx/app/core/mixins/messages_mixin.dart';
 import 'package:adf_vakinhaburger_getx/app/core/rest_client/rest_client.dart';
 import 'package:adf_vakinhaburger_getx/app/repositories/auth/auth_repository.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagesMixin {
@@ -31,20 +34,23 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
         email: email,
         password: password,
       );
-    } on RestClientException catch (e, s) {
+      final storage = GetStorage();
+      storage.write(Constants.USER_KEY, userModel.id);
       _loading.toggle();
-      log('Erro ao registrar usuario', error: e, stackTrace: s);
+    } on UserNotfoundException catch (e, s) {
+      _loading.toggle();
+      log('Usuario ou senha invalidos', error: e, stackTrace: s);
       _message(MessageModel(
         title: 'Erro',
-        message: e.message,
+        message: 'Usuario ou senha invalidos',
         type: MessageType.error,
       ));
     } catch (e, s) {
       _loading.toggle();
-      log('Erro ao registrar usuario', error: e, stackTrace: s);
+      log('Erro ao realizar login', error: e, stackTrace: s);
       _message(MessageModel(
         title: 'Erro',
-        message: "Erro ao registrar usuario",
+        message: "Erro ao realizar login",
         type: MessageType.error,
       ));
     }

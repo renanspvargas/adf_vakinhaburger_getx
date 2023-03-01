@@ -40,6 +40,7 @@ class RegisterController extends GetxController
         message: 'Cadastro realizado com sucesso!',
         type: MessageType.info,
       ));
+      _loading.toggle();
     } on RestClientException catch (e, s) {
       _loading.toggle();
       log('Erro ao registrar usuario', error: e, stackTrace: s);
