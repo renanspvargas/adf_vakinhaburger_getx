@@ -1,3 +1,4 @@
+import 'package:adf_vakinhaburger_getx/app/modules/auth/login/login_bindings.dart';
 import 'package:adf_vakinhaburger_getx/app/modules/auth/login/login_page.dart';
 import 'package:adf_vakinhaburger_getx/app/modules/auth/register/register_bindings.dart';
 import 'package:adf_vakinhaburger_getx/app/modules/auth/register/register_page.dart';
@@ -9,6 +10,7 @@ class AuthRoutes {
   static final routers = <GetPage>[
     GetPage(
       name: login,
+      binding: LoginBindings(),
       page: () => const LoginPage(),
     ),
     GetPage(
