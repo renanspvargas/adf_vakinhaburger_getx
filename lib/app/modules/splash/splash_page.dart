@@ -1,5 +1,6 @@
 import 'package:adf_vakinhaburger_getx/app/core/ui/constants/vakinha_images.dart';
 import 'package:adf_vakinhaburger_getx/app/core/ui/widgets/vakinha_button.dart';
+import 'package:adf_vakinhaburger_getx/app/routes/auth_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -37,7 +38,9 @@ class SplashPage extends StatelessWidget {
                   VakinhaButton(
                     label: 'ACESSAR',
                     width: context.widthTransformer(reducedBy: 40),
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed(AuthRoutes.login);
+                    },
                   ),
                 ],
               ),
