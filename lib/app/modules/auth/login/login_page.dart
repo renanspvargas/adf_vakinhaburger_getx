@@ -2,6 +2,7 @@ import 'package:adf_vakinhaburger_getx/app/core/ui/vakinha_ui.dart';
 import 'package:adf_vakinhaburger_getx/app/core/ui/widgets/vakinha_appbar.dart';
 import 'package:adf_vakinhaburger_getx/app/core/ui/widgets/vakinha_button.dart';
 import 'package:adf_vakinhaburger_getx/app/core/ui/widgets/vakinha_textformfield.dart';
+import 'package:adf_vakinhaburger_getx/app/routes/auth_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -51,7 +52,9 @@ class LoginPage extends StatelessWidget {
                       children: [
                         const Text('Não possui uma conta?'),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.toNamed(AuthRoutes.register);
+                          },
                           child: const Text(
                             'Cadastre-se',
                             style: VakinhaUI.textBold,
