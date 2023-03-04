@@ -4,7 +4,6 @@ import 'package:adf_vakinhaburger_getx/app/core/constants/constants.dart';
 import 'package:adf_vakinhaburger_getx/app/core/exceptions/user_notfound_exception.dart';
 import 'package:adf_vakinhaburger_getx/app/core/mixins/loader_mixin.dart';
 import 'package:adf_vakinhaburger_getx/app/core/mixins/messages_mixin.dart';
-import 'package:adf_vakinhaburger_getx/app/core/rest_client/rest_client.dart';
 import 'package:adf_vakinhaburger_getx/app/repositories/auth/auth_repository.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:get/get.dart';
