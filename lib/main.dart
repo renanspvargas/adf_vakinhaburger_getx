@@ -1,6 +1,7 @@
 import 'package:adf_vakinhaburger_getx/app/core/bindings/application_binding.dart';
 import 'package:adf_vakinhaburger_getx/app/core/ui/vakinha_ui.dart';
 import 'package:adf_vakinhaburger_getx/app/routes/auth_routes.dart';
+import 'package:adf_vakinhaburger_getx/app/routes/home_routers.dart';
 import 'package:adf_vakinhaburger_getx/app/routes/splash_routers.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
@@ -23,6 +24,7 @@ class VakinhaBugerMainApp extends StatelessWidget {
       getPages: [
         ...SplashRouters.routers,
         ...AuthRoutes.routers,
+        ...HomeRouters.routers,
       ],
     );
   }
